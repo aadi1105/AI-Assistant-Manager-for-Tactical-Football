@@ -1,0 +1,41 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome · Team Selector</title>
+  <link rel="stylesheet" href="styles/welcome.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>CHOOSE TEAMS</h1>
+
+    <div class="dropdown-row">
+      <div class="dropdown-block">
+        <label>Home</label>
+        <select id="home-select">
+          <option value="">-- Select Team --</option>
+          <option value="arsenal">Arsenal</option>
+          <option value="chelsea">Chelsea</option>
+        </select>
+        <img id="home-img" class="team-img hidden" alt="Home team badge" />
+      </div>
+
+      <div class="dropdown-block">
+        <label>Away</label>
+        <select id="away-select">
+          <option value="">-- Select Team --</option>
+          <option value="arsenal">Arsenal</option>
+          <option value="chelsea">Chelsea</option>
+        </select>
+        <img id="away-img" class="team-img hidden" alt="Away team badge" />
+      </div>
+    </div>
+
+    <button id="generate-btn" class="hidden">Generate Pre-Match Report</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

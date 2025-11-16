@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Match Report</title>
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- Left 70% -->
+    <section class="left">
+      <div class="events-panel" id="events-panel">
+        <div class="events-header">Recent Events</div>
+        <ul id="events-list"></ul>
+      </div>
+
+      <div class="left-content">
+        <!-- Tiles (single grid, exactly 6 tiles) -->
+        <div class="tiles-grid" id="tiles-grid">
+          <div class="tile" id="tile-0"><div class="model-label"></div><div class="model-prob"></div></div>
+          <div class="tile" id="tile-1"><div class="model-label"></div><div class="model-prob"></div></div>
+          <div class="tile" id="tile-2"><div class="model-label"></div><div class="model-prob"></div></div>
+          <div class="tile" id="tile-3"><div class="model-label"></div><div class="model-prob"></div></div>
+          <div class="tile" id="tile-4"><div class="model-label"></div><div class="model-prob"></div></div>
+          <div class="tile" id="tile-5"><div class="model-label"></div><div class="model-prob"></div></div>
+        </div>
+      </div>
+
+      <div class="left-input" id="left-input">
+        <button id="events-toggle" aria-label="Show recent events">^</button>
+        <input id="event-input" type="text" maxlength="120" placeholder="enter event (max 5 words)" />
+      </div>
+    </section>
+
+    <!-- Right 30% -->
+    <aside class="right">
+      <div class="card card-top">
+        <div class="teams-vs">
+          <img id="home-badge" alt="Home badge" />
+          <span class="vs">VS</span>
+          <img id="away-badge" alt="Away badge" />
+        </div>
+
+      <!-- Timer row: Vertical layout -->
+      <div class="timer-row">
+
+        <!-- BIG TIMER -->
+        <div id="timer" class="big-timer">90:00</div>
+
+        <!-- SMALL TIMER LABEL -->
+        <div id="slider-time" class="small-time">00:00</div>
+
+        <!-- SLIDER ONLY -->
+        <div class="slider-container">
+            <input id="time-slider" type="range" min="0" max="5400" value="0" step="1" />
+        </div>
+
+        <!-- FIX: Time input placed OUTSIDE the slider container -->
+        <input id="time-input" type="number" min="0" max="5400" value="0" step="1" style="width:80px;">
+
+        <!-- BUTTONS -->
+        <div class="timer-controls">
+            <div class="timer-buttons">
+                <button id="play-btn">Play</button>
+                <button id="jump-goal">Go to next event</button>
+            </div>
+            <button id="timer-btn" class="start">Start Timer</button>
+        </div>
+
+      </div>
+  
+      <div class="card card-bottom">
+        <h3>Summary</h3>
+
+        <!-- reinforcement results -->
+        <div id="title-0" class="summary-line"></div>
+        <div id="title-1" class="summary-line"></div>
+        <div id="title-2" class="summary-line"></div>
+        <div id="title-3" class="summary-line"></div>
+        <div id="title-4" class="summary-line"></div>
+        <div id="title-5" class="summary-line"></div>
+        <div id="title-6" class="summary-line"></div>
+
+        <!-- summary tile -->
+        <div id="summary-tile" style="margin-top:12px; font-weight:600;"></div>
+      </div>
+    </aside>
+  </main>
+
+<script src="api.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
